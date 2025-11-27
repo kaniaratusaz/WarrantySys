@@ -1,7 +1,9 @@
 # WarrantySys  
 **Warranty Claim Management System using Java, JavaFX & MySQL**
 
-WarrantySys adalah aplikasi desktop berbasis Java yang dirancang untuk membantu perusahaan atau toko dalam mengelola proses **klaim garansi**, data pelanggan, dan data produk secara terstruktur dan efisien. Aplikasi ini dibangun menggunakan JavaFX untuk antarmuka, MySQL sebagai database, serta konsep OOP dan arsitektur MVC agar mudah dikembangkan.
+WarrantySys adalah aplikasi desktop berbasis Java yang dirancang untuk membantu perusahaan atau toko dalam mengelola proses **klaim garansi**, data pelanggan, dan data produk secara terstruktur dan efisien.
+
+Aplikasi ini dibangun menggunakan JavaFX untuk antarmuka, MySQL sebagai database, serta konsep OOP dan arsitektur MVC agar mudah dikembangkan.
 
 ---
 
@@ -156,5 +158,6 @@ password: staff123
 ## 📝 Catatan Akhir
 
 Aplikasi WarrantySys ini merupakan hasil pengembangan proyek akhir dari mata kuliah Pemrograman Berorientasi Objek. Selama proses pengembangannya, saya memperoleh banyak pengalaman berharga dalam menerapkan konsep OOP, mengintegrasikan JavaFX sebagai antarmuka grafis, serta menghubungkan aplikasi Java dengan database MySQL melalui JDBC. Project ini membantu saya memahami bagaimana membangun aplikasi desktop yang terstruktur dengan pendekatan MVC dan memanfaatkan konsep-konsep OOP seperti Encapsulation, Polymorphism, Abstraction, serta Exception Handling.
+
 
 Selain itu, pengerjaan WarrantySys juga memberikan pemahaman yang lebih mendalam tentang manajemen data, pembuatan UI yang konsisten, serta penerapan role-based access antara Admin dan Staff. Ke depannya, aplikasi ini masih dapat dikembangkan lebih lanjut, baik dari sisi fitur maupun tampilan, namun versi saat ini telah memenuhi kebutuhan dasar dari sistem pengelolaan klaim garansi. Diharapkan project ini dapat bermanfaat sebagai referensi dan pembelajaran dalam pengembangan aplikasi berbasis Java.

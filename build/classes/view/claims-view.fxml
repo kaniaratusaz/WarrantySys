@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ClaimController">
+    <top>
+        <Label text="Manajemen Klaim Garansi"
+               style="-fx-font-size: 16px; -fx-padding: 10; -fx-font-weight: bold;"/>
+    </top>
+    <center>
+        <VBox spacing="10">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <TableView fx:id="tblClaims" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colNumber" text="No. Klaim" prefWidth="120"/>
+                    <TableColumn fx:id="colCustomer" text="Pelanggan" prefWidth="150"/>
+                    <TableColumn fx:id="colProduct" text="Produk" prefWidth="150"/>
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="100"/>
+                </columns>
+            </TableView>
+            <TitledPane text="Form Klaim" expanded="true">
+                <content>
+                    <GridPane hgap="10" vgap="10">
+                        <Label text="Pelanggan:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="cbCustomer" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Produk:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="cbProduct" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="No. Seri:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtSerial" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <Label text="Tgl Pembelian:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <DatePicker fx:id="dpPurchaseDate" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <Label text="Tgl Klaim:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <DatePicker fx:id="dpClaimDate" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                        <Label text="Status:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="cbStatus" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                        <Label text="Keluhan:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                        <TextArea fx:id="txtIssue" GridPane.rowIndex="6" GridPane.columnIndex="1" prefRowCount="2"/>
+
+                        <Label text="Catatan Penyelesaian:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                        <TextArea fx:id="txtResolution" GridPane.rowIndex="7" GridPane.columnIndex="1" prefRowCount="2"/>
+                    </GridPane>
+                </content>
+            </TitledPane>
+            <HBox spacing="10">
+                <Button text="Tambah" onAction="#handleAdd"/>
+                <Button text="Ubah" onAction="#handleUpdate"/>
+                <Button text="Hapus" onAction="#handleDelete"/>
+                <Button text="Bersihkan" onAction="#handleClear"/>
+                <Button text="Export CSV" onAction="#handleExportCsv"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

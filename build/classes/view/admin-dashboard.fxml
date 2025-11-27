@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AdminDashboardController"
+            stylesheets="@dashboard.css">
+
+    <!-- ============ SIDEBAR ============ -->
+    <left>
+        <VBox styleClass="sidebar" spacing="20">
+
+            <!-- Judul Sistem -->
+            <VBox alignment="CENTER_LEFT" styleClass="sidebar-header">
+                <Label text="WarrantySys" styleClass="sidebar-title"/>
+                <Label text="Admin Panel" styleClass="sidebar-subtitle"/>
+            </VBox>
+
+            <!-- MENU (bagian utama) -->
+            <VBox spacing="6" VBox.vgrow="ALWAYS">
+                <Button text="Dashboard" styleClass="menu-button-selected"/>
+                <Button text="Kelola Pelanggan" styleClass="menu-button" onAction="#openCustomers"/>
+                <Button text="Kelola Produk" styleClass="menu-button" onAction="#openProducts"/>
+                <Button text="Kelola Klaim Garansi" styleClass="menu-button" onAction="#openClaims"/>
+            </VBox>
+
+            <!-- LOGOUT (bagian bawah sidebar) -->
+            <VBox alignment="BOTTOM_CENTER">
+                <Button text="Logout" onAction="#handleLogout" styleClass="logout-button-wide"/>
+            </VBox>
+
+        </VBox>
+    </left>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <center>
+    <VBox spacing="20" styleClass="main-area">
+
+        <!-- Username -->
+        <HBox alignment="CENTER_RIGHT">
+            <Label fx:id="lblUser" text="Halo, Admin" styleClass="username"/>
+        </HBox>
+
+        <!-- Judul Halaman -->
+        <Label text="Dashboard Admin - Warranty Claim System" styleClass="page-title"/>
+
+        <!-- KARTU STATISTIK -->
+        <HBox spacing="20">
+
+            <VBox styleClass="card">
+                <Label text="Total Pelanggan" styleClass="card-title"/>
+                <Label fx:id="lblTotalCustomers" text="—" styleClass="card-value"/>
+            </VBox>
+
+            <VBox styleClass="card">
+                <Label text="Total Produk" styleClass="card-title"/>
+                <Label fx:id="lblTotalProducts" text="—" styleClass="card-value"/>
+            </VBox>
+
+            <VBox styleClass="card">
+                <Label text="Total Klaim Garansi" styleClass="card-title"/>
+                <Label fx:id="lblTotalClaims" text="—" styleClass="card-value"/>
+            </VBox>
+
+        </HBox>
+
+        <!-- PROGRESS KLAIM TERBARU -->
+        <Label text="Progress Klaim Terbaru"
+               style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10 0 0 0;"/>
+
+        <TableView fx:id="tblRecentClaims" prefHeight="260">
+
+            <columns>
+                <TableColumn text="No. Klaim" fx:id="colRecentNumber" prefWidth="150"/>
+                <TableColumn text="Pelanggan" fx:id="colRecentCustomer" prefWidth="200"/>
+                <TableColumn text="Produk" fx:id="colRecentProduct" prefWidth="200"/>
+                <TableColumn text="Status" fx:id="colRecentStatus" prefWidth="140"/>
+            </columns>
+
+        </TableView>
+
+    </VBox>
+</center>
+
+
+</BorderPane>

@@ -1,0 +1,177 @@
+/* ======= GLOBAL ======= */
+.root {
+    -fx-background-color: #f4f6f8;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+/* ======= SIDEBAR ======= */
+.sidebar {
+    -fx-background-color: #2f3542;
+    -fx-padding: 25;
+    -fx-pref-width: 240;
+}
+
+.sidebar-header {
+    -fx-padding: 0 0 30 0;
+}
+
+.sidebar-title {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.sidebar-subtitle {
+    -fx-font-size: 13;
+    -fx-text-fill: #d1d1d1;
+}
+
+.menu-button,
+.menu-button-selected {
+    -fx-background-radius: 10;
+    -fx-padding: 12;
+    -fx-font-size: 15;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-width: 200;
+}
+
+.menu-button:hover {
+    -fx-background-color: rgba(255,255,255,0.15);
+}
+
+.menu-button-selected {
+    -fx-background-color: #57606f;
+    -fx-font-weight: bold;
+}
+
+/* ======= TOP HEADER ======= */
+.username {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.logout-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 6 14;
+}
+
+.logout-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* ======= MAIN CONTENT ======= */
+.main-area {
+    -fx-padding: 30;
+}
+
+.page-title {
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f3542;
+}
+
+/* ======= DASHBOARD CARDS ======= */
+.card {
+    -fx-background-color: white;
+    -fx-padding: 24;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 3);
+    -fx-min-width: 200;
+}
+
+.card-title {
+    -fx-font-size: 14;
+    -fx-text-fill: #777;
+}
+
+.card-value {
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f3542;
+}
+
+.logout-button-wide {
+    -fx-pref-width: 220px;       /* samakan dengan lebar button menu */
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-padding: 10 0;
+}
+
+.logout-button-wide:hover {
+    -fx-background-color: #c9302c;
+}
+
+.input-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #cccccc;
+    -fx-padding: 6 8;
+    -fx-font-size: 13px;
+}
+.input-field:focused {
+    -fx-border-color: #4a90e2;
+}
+
+.primary-button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-padding: 6 14;
+}
+.primary-button:hover {
+    -fx-background-color: #3a78c2;
+}
+
+.secondary-button {
+    -fx-background-color: #ececec;
+    -fx-text-fill: #333;
+    -fx-background-radius: 6px;
+}
+.secondary-button:hover {
+    -fx-background-color: #dcdcdc;
+}
+
+.danger-button {
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+}
+.danger-button:hover {
+    -fx-background-color: #c64542;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.1, 0, 2);
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f4f4f4;
+}
+
+.table-view .table-row-cell {
+    -fx-padding: 6 4;
+    -fx-font-size: 13px;
+}
+
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+}

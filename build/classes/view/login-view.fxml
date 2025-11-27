@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.LoginController"
+            stylesheets="@dashboard.css">
+
+    <!-- ================== SIDEBAR KIRI ================== -->
+    <left>
+        <VBox styleClass="sidebar" alignment="CENTER">
+            <Label text="WarrantySys" styleClass="sidebar-title" />
+            <Label text="Login Panel" styleClass="sidebar-subtitle"/>
+        </VBox>
+    </left>
+
+    <!-- ================== FORM LOGIN ================== -->
+    <center>
+        <VBox alignment="CENTER" spacing="10" styleClass="main-area">
+
+            <Label text="Silakan Login" styleClass="page-title"/>
+
+            <VBox spacing="6" styleClass="card" maxWidth="350" style="-fx-padding: 20;">
+                
+                <Label text="Username" styleClass="card-title"/>
+                <TextField fx:id="txtUsername" promptText="Masukkan username"
+                           style="-fx-pref-height: 32;"/>
+
+                <Label text="Password" styleClass="card-title" 
+                       style="-fx-padding: 8 0 0 0;"/>
+                <PasswordField fx:id="txtPassword" promptText="Masukkan password"
+                               style="-fx-pref-height: 32;"/>
+
+                <Button text="Login"
+                        onAction="#handleLogin"
+                        styleClass="logout-button-wide"
+                        style="-fx-margin-top: 10; -fx-pref-height: 38;" />
+
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

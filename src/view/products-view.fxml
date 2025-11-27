@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ProductController">
+    <top>
+        <Label text="Manajemen Produk" style="-fx-font-size: 16px; -fx-padding: 10; -fx-font-weight: bold;"/>
+    </top>
+    <center>
+        <VBox spacing="10">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <TableView fx:id="tblProducts" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colName" text="Nama Produk" prefWidth="150"/>
+                    <TableColumn fx:id="colModel" text="Model" prefWidth="100"/>
+                    <TableColumn fx:id="colWarranty" text="Garansi (bulan)" prefWidth="120"/>
+                </columns>
+            </TableView>
+            <TitledPane text="Form Produk" expanded="true">
+                <content>
+                    <GridPane hgap="10" vgap="10">
+                        <Label text="Nama:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                        <Label text="Model:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtModel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                        <Label text="Garansi (bulan):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtWarranty" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    </GridPane>
+                </content>
+            </TitledPane>
+            <HBox spacing="10">
+                <Button text="Tambah" onAction="#handleAdd"/>
+                <Button text="Ubah" onAction="#handleUpdate"/>
+                <Button text="Hapus" onAction="#handleDelete"/>
+                <Button text="Bersihkan" onAction="#handleClear"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
